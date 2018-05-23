@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class = "container">
+        <form>
+            <h2>Friend Finder Survey</h2>
+            <br>
+            <div class = "form-group">
+                <label>Enter your name</label>
+                <input type = "text" class = "form-control" id = "nameInput" placeholder = "Enter Name">
+            </div>
+
+            <div class = "form-group">
+                <label>Enter a link for your avatar</label>
+                <input type = "text" class = "form-control" id = "avatarInput" placeholder = "Enter link">
+            </div>
+
+            <br>
+
+            <h5>Choose a number for how you feel about each question, 1 meaning you dont agree at all and 5 meaning you absolutely agree</h5>
+
+            <div class = "form-group">
+                <label>I would love to have a green lightsaber</label>
+                <select class = "form-control" id = "ques1">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>I would never force lightning someone into submission</label>
+                <select class = "form-control" id = "ques2">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>My force powers are to be respected, not abused for personal gain</label>
+                <select class = "form-control" id = "ques3">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>I would never utilize the dark side of the force</label>
+                <select class = "form-control" id = "ques4">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>Firearms are uncivilized compared to a lightsaber</label>
+                <select class = "form-control" id = "ques5">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>2 lightsabers are better than one</label>
+                <select class = "form-control" id = "ques6">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>I'd prefer to use both the light and dark side of the force</label>
+                <select class = "form-control" id = "ques7">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>Alderaan blowing up was a great tragedy</label>
+                <select class = "form-control" id = "ques8">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>Empire didn't do nothing wrong</label>
+                <select class = "form-control" id = "ques9">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label>I am better than others because of my force powers</label>
+                <select class = "form-control" id = "ques10">
+                    <option value = ""></option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                </select>
+            </div>
+
+            <button type = "submit" class="btn btn-primary btn-lg" id = "submitBtn">Submit</button>
+
+            <br>
+
+            <div id = "results" class = "modal" role = "dialog">
+                <div class = "modal-dialog">
+                    <div class = "modal-content">
+                        <div class = "modal-header">
+                            <h5 class = "modal-title">Your Friend is...</h5>
+                            <button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close">
+                                <span aria-hidden = "true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class = "modal-body">
+                            <h5 id = "match-name"></h5>
+                            <img id = "match-img">
+                        </div>
+
+                        <div class = "modal-footer">
+                            <button class = "btn btn-default" data-dismiss = "modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <footer class = "footer">
+                <div class = "container-fluid">
+                    <p>aaronbugden210</p>
+                </div>
+            </footer>
+        </form>
+    </div>
+    <script type = "text/javascript" src = "survey.js"></script>
+</body>
+</html>
